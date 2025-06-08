@@ -28,6 +28,9 @@
 
 #ifndef PICO_BOOTSEL_BUTTON_H
 #define PICO_BOOTSEL_BUTTON_H
+#ifdef __cplusplus
+extern "C" {
+#endif
 #include "pico/stdlib.h"
 
 typedef enum {
@@ -69,4 +72,7 @@ int32_t picoBootSelButtonInit(picoBootSelButton_t *button, picoBootSelButtonInte
  */
 int32_t picoBootSelButtonProcess(picoBootSelButton_t *button);
 
+#ifdef __cplusplus
+}
+#endif
 #endif /* PICO_BOOTSEL_BUTTON_H */
