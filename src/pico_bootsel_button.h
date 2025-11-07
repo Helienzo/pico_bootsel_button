@@ -33,6 +33,10 @@ extern "C" {
 #endif
 #include "pico/stdlib.h"
 
+#ifndef CONTAINER_OF
+#define CONTAINER_OF(ptr, type, member)	(type *)((char *)(ptr) - offsetof(type,member))
+#endif
+
 typedef enum {
     PICO_BOOTSEL_BTN_SUCCESS,
     PICO_BOOTSEL_BTN_NULL_ERROR    = -1,
